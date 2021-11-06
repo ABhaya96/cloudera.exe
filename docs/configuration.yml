@@ -15,14 +15,24 @@ datahub:
   suffix:
   tags:
 de:
+  definitions:
+  suffix:
+  tags:
+  force_delete:
+  vc_suffix:
 df:
   suffix:
   min_k8s_nodes:
   max_k8s_nodes:
   public_loadbalancer:
-  ip_ranges:
+  loadbalancer_ip_ranges:
+  kube_ip_ranges:
+  cluster_subnets:
+  loadbalancer_subnets:
   teardown:
     persist:
+  force_delete:
+  terminate_deployments:
 dw:
   definitions:
   suffix:
@@ -182,12 +192,14 @@ globals:
   dynamic_inventory:
     vm:
       count:
+      os:
   gcloud_credential_file:
   infra_type:
   labels:
     admin:
     app:
     cml:
+    cde:
     credential:
     cross_account:
     data:
@@ -277,7 +289,6 @@ infra:
     tag_key:
     tag_value:
     vm:
-      os:
       suffix:
       type:
   gcp:
